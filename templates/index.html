@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="Dash Chen">
+
+        <title>
+
+            唐诗生成 · Dash Chen
+
+        </title>
+
+        <link href="static/css/toolkit-inverse.css" rel="stylesheet">
+        <link href="static/css/font-awesome.min.css" rel="stylesheet">
+        <script type="css">
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+        </script>
+    </head>
+
+
+    <body>
+        <div class="bw" id="app">
+            <div class="fu">
+                <div class="aps" style="margin: 50px auto; width: 80%">
+                    <div class="apa">
+                        <div class="apb">
+                            <h2 class="apc">
+                                <i class="apc fa fa-leaf" aria-hidden="true"></i>唐诗生成
+                            </h2>
+                            <h6 class="apd">Dash Chen</h6>
+                        </div>
+                        <div class="ob ape">
+                            <div class="tn aol" style="width:300px;">
+                                <i class="bv fa fa-mail-forward" aria-hidden="true"></i>
+                                <input type="text" class="form-control" v-model="query" @keyup.enter="get_poem()" placeholder="请输入唐诗的第一句～确认按回车">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="aky">
+
+                    <div>
+                        <div class="fu apt">
+                            <div class="gq gg ala">
+                                <div class="apu ano">
+                                    <div class="alz">
+                                        <h3 class="ani">
+                                            ${this.poem[0]}
+                                        </h3>
+                                        <hr class="ans akt">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gq gg ala">
+                                <div class="apu anp">
+                                    <div class="alz">
+                                        <h3 class="ani">
+                                            ${this.poem[1]}
+                                        </h3>
+                                        <hr class="ans akt">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gq gg ala">
+                                <div class="apu anr">
+                                    <div class="alz">
+                                        <h3 class="ani">
+                                            ${this.poem[2]}
+                                        </h3>
+                                        <hr class="ans akt">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gq gg ala">
+                                <div class="apu anq">
+                                    <div class="alz">
+                                        <h3 class="ani">
+                                            ${this.poem[3]}
+                                        </h3>
+                                        <hr class="ans akt">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="anv alg ala">
+                            <h2 class="anw anx" v-if="loading">请静候唐诗生成<i class="fa fa-spinner fa-pulse"></i></h2>
+                            <h2 class="anw anx" v-else>请输入第一句</h2>
+                        </div>
+
+                        <div class="by">
+                            <h4 class="ty">
+                                数据库详情
+                            </h4>
+                            <a class="ph">
+                                <span class="dy dh">43,212</span>
+                                收录唐诗总数：
+                            </a>
+                            <a class="ph">
+                                <span class="dy dh">433,120</span>
+                                诗句总数：
+                            </a>
+                        </div>
+
+                        <div class="by">
+                            <h4 class="ty">
+                                算法设计：
+                            </h4>
+                            <a class="ph">
+                                <span class="dy dh">隐马尔可夫模型(HMM)</span>
+                                模型：
+                            </a>
+                            <a class="ph">
+                                <span class="dy dh">维特比(Viterbi)算法</span>
+                                算法：
+                            </a>
+                        </div>
+
+                        <div class="by">
+                            <h4 class="ty">
+                                作者信息：
+                            </h4>
+                            <a class="ph">
+                                <span class="dy dh">Dash Chen</span>
+                                Name：
+                            </a>
+                            <a class="ph">
+                                <span class="dy dh">chenzhh3671@gmail.com</span>
+                                Email：
+                            </a>
+                            <a class="ph">
+                                <span class="dy dh">http://dc3671.github.io/</span>
+                                Website：
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="static/js/vue.js"></script>
+        <script src="static/js/axios.min.js"></script>
+        <script src="static/js/index.js"></script>
+    </body>
+</html>
