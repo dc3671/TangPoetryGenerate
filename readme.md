@@ -1,4 +1,9 @@
-# 基于隐马尔可夫模型的自自动赋诗系统
+# 基于隐马尔可夫模型的自动赋诗系统
+
+## front-end features
+
+- animation of `fontawesome`
+- use `Vue.$set` to update array
 
 ## 算法设计
 
